@@ -1,0 +1,27 @@
+# 認証局の名前
+ROOTCA=rootCA
+
+# 証明書を発行するドメイン名
+DOMAIN=testDomain.jp
+
+# 鍵のパスワード 本ファイルに記載しない場合は対話で入力を求められます。
+KEYPASSWORD=keyPass01
+
+# 公開鍵用の情報（CSR）
+C_NAME=JP
+ST_NAME=Tokyo
+L_NAME=edogawa
+O_NAME=testCompany
+OU_NAME=software
+CN_NAME=my_rootCA
+
+# 証明書の有効期限 max 825日
+EXPIRATIONDATE=825
+
+# subjectAltName
+[SAN]
+subjectAltName=@alt_names
+basicConstraints=CA:FALSE
+[alt_names]
+DNS.1=${DOMAIN}
+DNS.2=*.${DOMAIN}

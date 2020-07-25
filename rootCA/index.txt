@@ -1,0 +1,1 @@
+V	221027083506Z		00	unknown	/C=JP/ST=Tokyo/O=testCompany/OU=software/CN=my_rootCA
